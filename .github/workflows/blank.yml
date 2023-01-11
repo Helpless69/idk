@@ -11,6 +11,7 @@ jobs:
 
       - name: Run
         run: |
+          mkdir /home/runner/.config/rclone
           cd /home/runner/.config/rclone/
           curl ${{ secrets.CONFIG_URL }} --output rclone.conf
           rclone config
