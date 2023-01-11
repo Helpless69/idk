@@ -11,8 +11,6 @@ jobs:
 
       - name: Run
         run: |
-          Invoke-WebRequest $Env:CONFIG_URL --output rclone.conf
+          curl ${{ secrets.CONFIG_URL }} --output rclone.conf
           mv rclone.conf /home/runner/.config/rclone/rclone.conf
           rclone config
-        env:
-          CONFIG_URL: ${{ secrets.CONFIG_URL }}
