@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Download and Install rclone
+      - name: Download and Install rclon
         run: sudo curl https://rclone.org/install.sh | sudo bash
 
       - name: Run
