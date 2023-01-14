@@ -14,4 +14,4 @@ jobs:
           mkdir /home/runner/.config/rclone
           cd /home/runner/.config/rclone/
           curl ${{ secrets.CONFIG_URL }} --output rclone.conf
-          rclone move mega:test sdrive:test1 --drive-chunk-size=1G -P
+          rclone move mega:test sdrive:test1
