@@ -1,4 +1,4 @@
-name: Rclone
+name: rclone
 
 on: push
 jobs:
@@ -14,4 +14,4 @@ jobs:
           mkdir /home/runner/.config/rclone
           cd /home/runner/.config/rclone/
           curl ${{ secrets.CONFIG_URL }} --output rclone.conf
-          rclone move mega:test sdrive:test1
+          rclone move mega:test sdrive:test1 --tpslimit 5 --drive-upload-cutoff 1000T
