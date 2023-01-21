@@ -6,10 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Download and Install rclone
-        run: mkdir gclone && cd gclone 
-             && curl https://github.com/l3v11/gclone/releases/download/v1.61.1-cold/gclone-v1.61.1-cold-linux-amd64.zip --output gclone.zip
-             && unzip gclone.zip && ls
+      - name: Make folder and download gclone
+        run: mkdir /home/runner/.config/rclone && cd /home/runner/.config/rclone/
+             && wget https://github.com/l3v11/gclone/releases/download/v1.61.1-cold/gclone-v1.61.1-cold-linux-amd64.zip
+      
+      - name: Unzip
+        run: cd /home/runner/.config/rclone/ && unzip gclone-v1.61.1-cold-linux-amd64.zip
              
              
              
