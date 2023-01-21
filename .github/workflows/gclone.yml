@@ -19,4 +19,4 @@ jobs:
       - name: setup gclone
         run: cd /home/runner/.config/rclone/
           && curl ${{ secrets.CONFIG_URL }} --output rclone.conf
-          && gclone sync sdrive: sbackup: --drive-server-side-across-configs --drive-random-pick-sa --drive-rolling-sa --drive-rolling-count=30 -P -v
+          && cd /home/runner/.config/rclone/gclone-v1.61.1-cold-linux-amd64/ && gclone sync sdrive: sbackup: --drive-server-side-across-configs --drive-random-pick-sa --drive-rolling-sa --drive-rolling-count=30 -P -v
