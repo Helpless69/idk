@@ -16,7 +16,7 @@ jobs:
       - name: cd to gclone and setup gclone
         run: cd /home/runner/.config/rclone/gclone-v1.61.1-cold-linux-amd64/ && sudo cp gclone /usr/bin/ && sudo chown root:root /usr/bin/gclone && sudo chmod 755 /usr/bin/gclone
  
-      - name: setup gclone configuration file and run
+      - name: setup gclone
         run: cd /home/runner/.config/rclone/
           && curl ${{ secrets.CONFIG_URL }} --output rclone.conf
           && gclone sync sdrive: sbackup: --drive-server-side-across-configs --drive-random-pick-sa --drive-rolling-sa --drive-rolling-count=30 -P -v
