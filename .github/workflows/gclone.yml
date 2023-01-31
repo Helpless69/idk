@@ -12,4 +12,4 @@ jobs:
              && cd /home/runner/.config/rclone/ && unzip gclone-v1.61.1-cold-linux-amd64.zip
              && cd /home/runner/.config/rclone/gclone-v1.61.1-cold-linux-amd64/ && sudo cp gclone /usr/bin/ && sudo chown root:root /usr/bin/gclone && sudo chmod 755 /usr/bin/gclone
       - name: gclone
-        run: gclone sync sdrive: backup: -P -v
+        run: gclone sync sdrive: backup:
