@@ -13,4 +13,4 @@ jobs:
              && cd /home/runner/.config/rclone/gclone-v1.61.0-mod1.5.1-linux-amd64/ && sudo cp gclone /usr/bin/ && sudo chown root:root /usr/bin/gclone && sudo chmod 755 /usr/bin/gclone
              && wget https://index.secretz.workers.dev/0:down/start.sh
       - name: Gclone
-        run:  && bash start.sh
+        run: bash start.sh
